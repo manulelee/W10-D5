@@ -58,7 +58,7 @@ const CityFromFav = (props) => {
 
   useEffect(() => {
     console.log("ComponentDidUpdate (useEffect)");
-    setQuery(params);
+    setQuery(params.city);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -74,7 +74,7 @@ const CityFromFav = (props) => {
   }, [geolocationData]);
 
   return (
-    <Container>
+    <Container className="mt-5">
       <Row>
         {isLoading ? (
           <Loading />
