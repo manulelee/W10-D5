@@ -24,7 +24,9 @@ const SingleCity = (props) => {
                 Coordinates: Lat: {props.wd.coord.lat} - Lon: {props.wd.coord.lon}
               </Card.Subtitle>
               <Card.Text>
-                <b>Weather:</b> {props.wd.weather[0].description} <br />
+                <b>Weather:</b> {props.wd.weather[0].description}{" "}
+                <img src={`https://openweathermap.org/img/wn/${props.wd.weather[0].icon}@2x.png`} alt="icon weather" />
+                <br />
                 <b>Temperature:</b> {Math.trunc(props.wd.main.temp - 273)}° <br />
                 <b>Min:</b> {Math.trunc(props.wd.main.temp_min - 273)}° <br />
                 <b>Max:</b> {Math.trunc(props.wd.main.temp_max - 273)}° <br />
